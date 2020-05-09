@@ -1,0 +1,10 @@
+.countrylist {
+    display: flex;
+    justify-content:center;
+    flex-wrap: wrap;
+    background-color: lightgrey;
+
+    img {
+        max-width:100%;
+    }
+}
