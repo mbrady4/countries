@@ -76,14 +76,15 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar />
       { !activeLoaded ? <h1>Loading...</h1> :
       <Router>
         <Switch>
           <Route path='/:country'>
+            <NavBar />
             <CountryDetail countries={countries} />
           </Route>
           <Route path="/">
+            <NavBar />
             <CountryList countries={activeCountries}
                           filters={filters}
                           inputChange={inputChange}/>

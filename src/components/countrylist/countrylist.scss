@@ -1,9 +1,26 @@
 .countrylist {
-    display: flex;
-    justify-content:center;
-    flex-wrap: wrap;
-    background-color: lightgrey;
+    background-color: #FAFAFA;
 
+    .wrapper {
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+
+        .filters {
+            padding-top: 2.5rem;
+            display:flex;
+            justify-content:space-between;
+            align-items: center;
+        }
+        .grid {
+            display: flex;
+            justify-content:center;
+            flex-wrap: wrap;
+        }
+    
+    }
     img {
         max-width:100%;
     }

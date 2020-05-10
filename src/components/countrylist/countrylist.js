@@ -6,15 +6,17 @@ import Search from './search/search.js';
 
 const CountryList = (props) => {
     return (
-        <div>
-            <div>
-                <Search inputChange={props.inputChange} />
-                <Selector inputChange={props.inputChange} />
-            </div>
-            <div className='countrylist'>
-                { props.countries.map( (country, key) => {
-                    return <CountryPanel country={country}/>
-                }) }
+        <div className='countrylist'>
+            <div className='wrapper'>
+                <div className='filters'>
+                    <Search inputChange={props.inputChange} />
+                    <Selector inputChange={props.inputChange} />
+                </div>
+                <div className='grid'>
+                    { props.countries.map( (country, key) => {
+                        return <CountryPanel country={country}/>
+                    }) }
+                </div>
             </div>
         </div>
     )

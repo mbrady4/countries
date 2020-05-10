@@ -1,4 +1,40 @@
 nav {
-    display:flex;
-    justify-content: space-between;
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.06);
+
+    .wrapper {
+        max-width: 1440px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 10px;
+        padding-right: 10px;
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    a {
+        text-decoration:none;
+    }
+    h1 {
+        font-size: 2.4rem;
+        font-weight: 700;
+        padding: 2.5rem 0;
+        color: black;
+    }
+
+    .dark-mode {
+        display:flex;
+        align-items: center;
+        font-size: 1.6rem;
+        background: none;
+        border:none;
+        font-weight: 500;
+        color: #111517;
+        line-height: 1.8rem;
+
+        img {
+            height:1.8rem;
+            padding-right: 0.5rem;
+        }
+    }
+
 }

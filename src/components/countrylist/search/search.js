@@ -1,15 +1,16 @@
 import React from 'react';
+import './search.scss';
 
 const Search = (props) => {
     return (
-        <form>
+        <div className='search'>
             <label htmlFor='search'>
-                <input  type='text' 
+                <input  type='search' 
                         name='search'
                         onChange={props.inputChange}
                         placeholder='Search for a country...'/>
             </label>
-        </form>
+        </div>
     )
 }
 

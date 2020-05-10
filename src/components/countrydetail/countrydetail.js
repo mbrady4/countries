@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams } from "react-router-dom";
 import BorderCountries from './bordercountries/bordercountries.js';
 import BackButton from './backbutton/backbutton.js';
+import './countrydetail.scss';
 
 const CountryDetail = (props) => {
     const params = useParams();
@@ -18,26 +19,31 @@ const CountryDetail = (props) => {
     const languages = [];
     country.languages.map( (language) => languages.push(language.name));
     return (
-        <div>
-            <div>
+        <div className='wrapper'>
             <BackButton />
-            <img src={country.flag} alt="Flag"/>
-            </div>
-            <div>
-            <h2>{country.name}</h2>
-            <div>
-                <p>Native Name: {country.nativeName} </p>
-                <p>Population: {country.population}</p>
-                <p>Region: {country.region}</p>
-                <p>Sub Region: {country.subregion}</p>
-                <p>Capital: {country.capital}</p>
-            </div>
-            <div>
-                <p>Top Level Domain: {country.topLevelDomain}</p>
-                <p>Currencies: {currencies.join(' ')}</p>
-                <p>Languages: {languages.join(' ')}</p>
-            </div>
-            <BorderCountries countries={country.borders}/>
+            <div className='detail'>
+                <div className='detail-lhs'>
+                
+                <img src={country.flag} alt="Flag"/>
+                </div>
+                <div className='detail-rhs'>
+                <h2>{country.name}</h2>
+                <div className='detail-info'>
+                    <div>
+                        <p><span>Native Name:</span> {country.nativeName} </p>
+                        <p><span>Population:</span> {country.population}</p>
+                        <p><span>Region:</span> {country.region}</p>
+                        <p><span>Sub Region:</span> {country.subregion}</p>
+                        <p><span>Capital:</span> {country.capital}</p>
+                    </div>
+                    <div>
+                        <p><span>Top Level Domain:</span> {country.topLevelDomain}</p>
+                        <p><span>Currencies:</span> {currencies.join(' ')}</p>
+                        <p><span>Languages:</span> {languages.join(' ')}</p>
+                    </div>
+                </div>
+                <BorderCountries countries={country.borders}/>
+                </div>
             </div>
         </div>
     )

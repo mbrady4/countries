@@ -1,0 +1,14 @@
+.selector {
+    background-color:white;
+    padding: 1.5rem;
+    max-width: 200px;
+    box-shadow: 0 2px 9px 0 rgba(0,0,0,0.05);
+    border-radius: 5px; 
+
+    select {
+        border:none;
+        font-size:1.4rem;
+        color: black;
+        background:none;
+    }
+}

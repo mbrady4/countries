@@ -1,8 +1,9 @@
 import React from 'react';
+import './selector.scss';
 
 const Selector = (props) => {
     return (
-        <form>
+        <form className='selector'>
             <label htmlFor='region'>
                 <select id='region' 
                         name='region'
