@@ -1,6 +1,8 @@
 import React from 'react';
 import './selector.scss';
 
+// Component renders a dropdown menu for use to select which region they want to filter the countrylist by
+// Components invokes onChange to pass the user input back to App.js
 const Selector = (props) => {
     return (
         <form className='selector'>

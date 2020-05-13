@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from "react-router-dom";
 import './backbutton.scss';
 
+// Renders a back button which takes the user back to their most recently viewed page
 const BackButton = () => {
     let history = useHistory();
     return (

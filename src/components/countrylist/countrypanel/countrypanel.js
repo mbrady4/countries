@@ -1,7 +1,9 @@
 import React from 'react';
+import './countrypanel.scss';
 import { Link } from 'react-router-dom';
-import './countrypanel.scss'
 
+// Component takes a country object provided via props and renders a countrypanel with information about the country
+// Links to the country's detail page
 const CountryPanel = (props) => {
     return (
         <div className='countrypanel'>

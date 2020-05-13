@@ -1,23 +1,27 @@
 import React from 'react';
 import { useParams } from "react-router-dom";
+import './countrydetail.scss';
 import BorderCountries from './bordercountries/bordercountries.js';
 import BackButton from './backbutton/backbutton.js';
-import './countrydetail.scss';
 
+// Renders the country detail page
+// Invokes the following child components: BackButton, BorderCountries
 const CountryDetail = (props) => {
+    // stores parameters from URL
     const params = useParams();
-    // console.log(params.country);
-    // const match = useRouteMatch();
-    // console.log('match', match);  
 
+    // stores the country object that matches the parameter provided by the URL
     const country = props.countries.find(country => country.alpha3Code === params.country);
     console.log(country);
 
+    // Takes array of objects and creates array of strings
     const currencies = [];
     country.currencies.map( (currency) => currencies.push(currency.code));
 
+    // Takes array of objects and creates array of strings
     const languages = [];
     country.languages.map( (language) => languages.push(language.name));
+
     return (
         <div className='wrapper'>
             <BackButton />
@@ -50,17 +54,3 @@ const CountryDetail = (props) => {
 };
 
 export default CountryDetail;
-
-/*
-alpha3Code: "USA"
-borders: (2) ["CAN", "MEX"]
-capital: "Washington, D.C."
-currencies: [{…}]
-flag: "https://restcountries.eu/data/usa.svg"
-languages: [{…}]
-name: "United States of America"
-population: 323947000
-region: "Americas"
-subregion: "Northern America"
-topLevelDomain: [".us"]
-*/
